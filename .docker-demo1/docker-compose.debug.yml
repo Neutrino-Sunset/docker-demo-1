@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+  database:
+    image: "mongo"
+    volumes:
+      - data:/data/db
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+
+  apiservice:
+    build: ../apiservice
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ../apiservice:/app
+      - /app/node_modules
+    ports: 
+      - 3000:3000
+      - 9229:9229
+    stdin_open: true
+    tty: true
+    command: ["./node_modules/.bin/nodemon", "--inspect=0.0.0.0:9229", "server.js"]
+    depends_on: 
+      - database
+      
+  appservice:
+    build: ../appservice
+    volumes:
+      - ../appservice:/app
+      - /app/node_modules
+    ports:
+      - "4200:4200"
+    stdin_open: true
+    tty: true
+    depends_on: 
+      - apiservice
+volumes:
+  data:
+
+

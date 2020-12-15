@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".docker-demo1"
+		},
+		{
+			"path": "apiservice"
+		},
+		{
+			"path": "appservice"
+		}
+	],
+	"settings": {}
+}

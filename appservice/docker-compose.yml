@@ -1,0 +1,11 @@
+version: "3.8"
+services: 
+  npm:
+    image: node:lts-alpine
+    working_dir: /app
+    entrypoint: ["sh"]
+    stdin_open: true
+    tty: true
+    user: "node"
+    volumes:
+      - ./:/app

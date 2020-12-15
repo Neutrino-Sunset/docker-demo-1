@@ -1,0 +1,66 @@
+
+.container-vert {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.card {
+   background-color: rgb(116, 46, 167);
+   text-align: center;
+   border-radius: 10px;
+   width: 500px;
+   margin: 10px;
+}
+
+.entry {
+   background-color: rgb(139, 136, 136);
+   border-radius: 5px;
+   margin: 6px 10px;
+}
+
+.container-horz {
+   display: flex;
+   width: 520px;
+   padding: 0;
+   justify-content: space-between;
+}
+
+.card-half {
+   width: 250px;
+   background-color: rgb(116, 46, 167);
+   text-align: center;
+   border-radius: 10px;
+   margin: 10px;
+   padding: 10px;
+}
+
+input {
+   margin: 10px;
+   padding: 5px;
+   width: 220px;
+   border: none;
+   border-radius: 5px;
+}
+
+button {
+   margin: 10px;
+   padding: 10px 20px;
+   cursor: pointer;
+   border: none;
+   font-size: larger;
+   background-color: rgb(196, 144, 13);
+   border-radius: 10px;
+}
+
+button:hover {
+   background-color: rgb(221, 178, 69);
+}
+
+button:active {
+   background-color: rgb(196, 144, 13);
+   box-shadow: 0 -2px rgb(62, 22, 90);
+   transform: translateY(1px);
+}
+
+
